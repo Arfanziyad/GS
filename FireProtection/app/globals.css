@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-brand-red text-white font-semibold text-sm tracking-wide uppercase rounded-sm transition-all duration-200 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-brand-red focus:ring-offset-2 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent text-white font-semibold text-sm tracking-wide uppercase rounded-sm border-2 border-white transition-all duration-200 hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent active:scale-95;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent text-gray-900 font-semibold text-sm tracking-wide uppercase rounded-sm border-2 border-gray-900 transition-all duration-200 hover:bg-gray-900 hover:text-white focus:outline-none active:scale-95;
+  }
+
+  .section-kicker {
+    @apply inline-flex items-center gap-2 text-brand-blue font-semibold text-xs tracking-widest uppercase mb-4;
+  }
+
+  .section-heading {
+    @apply text-3xl sm:text-4xl font-bold text-gray-900 leading-tight;
+  }
+
+  .section-subheading {
+    @apply text-lg text-gray-500 mt-4 leading-relaxed max-w-2xl;
+  }
+
+  .card-base {
+    @apply bg-white border border-gray-100 rounded-sm shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
