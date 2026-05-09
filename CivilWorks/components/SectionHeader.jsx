@@ -8,7 +8,7 @@ export default function SectionHeader({ kicker, title, subtitle, light, centered
       {kicker && (
         <span
           className={`inline-block text-xs font-bold tracking-[0.2em] uppercase mb-3 ${
-            light ? "text-blue-300" : "text-[#0B5ED7]"
+            light ? "text-blue-300" : "text-brand-blue"
           }`}
         >
           {kicker}

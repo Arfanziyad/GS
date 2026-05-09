@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-sm flex items-center justify-center bg-[#0B5ED7]">
+            <div className="w-9 h-9 rounded-sm flex items-center justify-center bg-brand-blue">
               <span className="text-white font-bold text-sm tracking-tight">GS</span>
             </div>
             <div className="flex flex-col leading-none">
@@ -46,7 +46,7 @@ export default function Navbar() {
               </span>
               <span
                 className={`text-[10px] font-medium tracking-widest uppercase transition-colors ${
-                  scrolled ? "text-[#0B5ED7]" : "text-blue-200"
+                  scrolled ? "text-brand-blue" : "text-blue-200"
                 }`}
               >
                 Civil Works
@@ -60,7 +60,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-[#0B5ED7] ${
+                className={`text-sm font-medium transition-colors hover:text-brand-blue ${
                   scrolled ? "text-gray-700" : "text-white/90"
                 }`}
               >
@@ -69,7 +69,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              className="ml-2 px-5 py-2.5 rounded-sm bg-[#E10600] text-white text-sm font-semibold tracking-wide hover:bg-red-700 transition-colors"
+              className="ml-2 px-5 py-2.5 rounded-sm bg-brand-red text-white text-sm font-semibold tracking-wide hover:bg-red-700 transition-colors"
             >
               Request Consultation
             </a>
@@ -111,7 +111,7 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="py-3 px-2 text-sm font-medium text-gray-700 border-b border-gray-50 hover:text-[#0B5ED7] transition-colors"
+                className="py-3 px-2 text-sm font-medium text-gray-700 border-b border-gray-50 hover:text-brand-blue transition-colors"
               >
                 {link.label}
               </Link>
@@ -119,7 +119,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-3 text-center px-5 py-3 bg-[#E10600] text-white text-sm font-semibold rounded-sm hover:bg-red-700 transition-colors"
+              className="mt-3 text-center px-5 py-3 bg-brand-red text-white text-sm font-semibold rounded-sm hover:bg-red-700 transition-colors"
             >
               Request Consultation
             </a>

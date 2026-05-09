@@ -1,13 +1,13 @@
 import Link from "next/link";
 
 const divisions = [
-  { label: "Architectural Products", href: "/architectural-products" },
-  { label: "Civil Works", href: "/civil-works" },
-  { label: "Electrical & Instrumentation", href: "/electrical-instrumentation" },
-  { label: "Mechanical & Piping", href: "/mechanical-piping" },
-  { label: "Fire Protection", href: "/fire-protection" },
-  { label: "Rental Services", href: "/rental-services" },
-  { label: "Scaffolding", href: "/scaffolding" },
+  { label: "Architectural Products", href: "/architectural" },
+  { label: "Civil Works", href: "/civil" },
+  { label: "Electrical & Instrumentation", href: "/electrical" },
+  { label: "Mechanical & Piping", href: "#" },
+  { label: "Fire Protection", href: "/fire" },
+  { label: "Rental Services", href: "/rental" },
+  { label: "Scaffolding", href: "#" },
 ];
 
 const companyLinks = [

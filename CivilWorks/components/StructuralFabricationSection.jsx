@@ -94,7 +94,7 @@ function FabCard({ image, title, description, items, tall }) {
   return (
     <div
       className={`group relative overflow-hidden rounded-xl shadow-lg ${
-        tall ? "h-96 lg:h-[440px]" : "h-80 lg:h-[360px]"
+        tall ? "h-96 lg:h-110" : "h-80 lg:h-90"
       }`}
     >
       <div
@@ -102,10 +102,10 @@ function FabCard({ image, title, description, items, tall }) {
         style={{ backgroundImage: `url(${image})` }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/50 to-black/10" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/88 via-black/50 to-black/10" />
 
       {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#0B5ED7] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-brand-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
       <div className="relative h-full flex flex-col justify-end p-7">
         <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
@@ -113,7 +113,7 @@ function FabCard({ image, title, description, items, tall }) {
         <ul className="grid grid-cols-2 gap-x-4 gap-y-1">
           {items.map((item) => (
             <li key={item} className="flex items-start gap-1.5 text-xs text-gray-400">
-              <span className="w-1 h-1 rounded-full bg-[#0B5ED7] flex-shrink-0 mt-1.5" />
+              <span className="w-1 h-1 rounded-full bg-brand-blue shrink-0 mt-1.5" />
               {item}
             </li>
           ))}

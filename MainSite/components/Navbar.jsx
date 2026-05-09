@@ -3,22 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
-const BASE = {
-  architectural: process.env.NEXT_PUBLIC_URL_ARCHITECTURAL  ?? "http://localhost:3001",
-  civil:         process.env.NEXT_PUBLIC_URL_CIVIL          ?? "http://localhost:3002",
-  electrical:    process.env.NEXT_PUBLIC_URL_ELECTRICAL     ?? "http://localhost:3003",
-  fire:          process.env.NEXT_PUBLIC_URL_FIRE           ?? "http://localhost:3004",
-  rental:        process.env.NEXT_PUBLIC_URL_RENTAL         ?? "http://localhost:3005",
-};
-
 const divisions = [
-  { label: "Architectural Products",      href: BASE.architectural },
-  { label: "Civil Works",                 href: BASE.civil },
-  { label: "Electrical & Instrumentation",href: BASE.electrical },
-  { label: "Mechanical & Piping",         href: "#" },
-  { label: "Fire Protection Systems",     href: BASE.fire },
-  { label: "Rental Services",             href: BASE.rental },
-  { label: "Scaffolding",                 href: "#" },
+  { label: "Architectural Products",       href: "/architectural" },
+  { label: "Civil Works",                  href: "/civil" },
+  { label: "Electrical & Instrumentation", href: "/electrical" },
+  { label: "Mechanical & Piping",          href: "#" },
+  { label: "Fire Protection Systems",      href: "/fire" },
+  { label: "Rental Services",              href: "/rental" },
+  { label: "Scaffolding",                  href: "#" },
 ];
 
 const navLinks = [
@@ -129,14 +121,14 @@ export default function Navbar() {
                   <ul className="py-2">
                     {divisions.map((d) => (
                       <li key={d.label}>
-                        <a
+                        <Link
                           href={d.href}
                           onClick={() => setDivisionsOpen(false)}
                           className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-section-alt hover:text-brand-blue transition-colors group"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-brand-blue opacity-50 group-hover:opacity-100 transition-opacity" />
                           {d.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -205,14 +197,14 @@ export default function Navbar() {
               {divisionsOpen && (
                 <div className="pb-2 pl-4">
                   {divisions.map((d) => (
-                    <a
+                    <Link
                       key={d.label}
                       href={d.href}
                       onClick={() => { setMenuOpen(false); setDivisionsOpen(false); }}
                       className="block py-2.5 text-sm text-gray-600 hover:text-brand-blue transition-colors"
                     >
                       {d.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}

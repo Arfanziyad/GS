@@ -36,7 +36,7 @@ export default function Footer() {
           {/* Column 1 — Company */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 rounded-sm flex items-center justify-center bg-[#0B5ED7]">
+              <div className="w-9 h-9 rounded-sm flex items-center justify-center bg-brand-blue">
                 <span className="text-white font-bold text-sm">GS</span>
               </div>
               <div className="flex flex-col leading-none">
@@ -57,7 +57,7 @@ export default function Footer() {
                   key={s}
                   href="#"
                   aria-label={s}
-                  className="w-9 h-9 rounded-sm border border-gray-700 flex items-center justify-center hover:border-[#0B5ED7] hover:text-[#0B5ED7] transition-colors"
+                  className="w-9 h-9 rounded-sm border border-gray-700 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-colors"
                 >
                   <SocialIcon name={s} />
                 </a>
@@ -77,7 +77,7 @@ export default function Footer() {
                     href={href}
                     className="text-sm hover:text-white hover:translate-x-1 inline-flex items-center gap-1.5 transition-all"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[#0B5ED7]" />
+                    <span className="w-1 h-1 rounded-full bg-brand-blue" />
                     {label}
                   </Link>
                 </li>
@@ -94,7 +94,7 @@ export default function Footer() {
               {services.map((s) => (
                 <li key={s}>
                   <span className="text-sm inline-flex items-center gap-1.5">
-                    <span className="w-1 h-1 rounded-full bg-[#E10600]" />
+                    <span className="w-1 h-1 rounded-full bg-brand-red" />
                     {s}
                   </span>
                 </li>
@@ -122,7 +122,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm">
-                <span className="text-[#0B5ED7] mt-0.5 flex-shrink-0">
+                <span className="text-brand-blue mt-0.5 shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                       d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -135,7 +135,7 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">
-                <span className="text-[#0B5ED7] flex-shrink-0">
+                <span className="text-brand-blue shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -146,7 +146,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm">
-                <span className="text-[#0B5ED7] flex-shrink-0">
+                <span className="text-brand-blue shrink-0">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -161,7 +161,7 @@ export default function Footer() {
             {/* Quick contact CTA */}
             <a
               href="mailto:civilworks@gsgroup.com"
-              className="mt-7 inline-flex items-center gap-2 w-full justify-center px-5 py-3 bg-[#0B5ED7] text-white font-semibold text-sm rounded-sm hover:bg-blue-700 transition-colors"
+              className="mt-7 inline-flex items-center gap-2 w-full justify-center px-5 py-3 bg-brand-blue text-white font-semibold text-sm rounded-sm hover:bg-blue-700 transition-colors"
             >
               Send Us a Message
             </a>

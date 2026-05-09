@@ -22,17 +22,17 @@ export default function HeroSection({
       />
 
       {/* Dark overlay — layered for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/50" aria-hidden="true" />
+      <div className="absolute inset-0 bg-linear-to-br from-black/80 via-black/60 to-black/50" aria-hidden="true" />
 
       {/* Blue accent bar — left side brand element */}
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#0B5ED7]" aria-hidden="true" />
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-blue" aria-hidden="true" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-32 lg:py-40">
         <div className="max-w-3xl">
           {/* Kicker */}
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-8 h-px bg-[#0B5ED7]" />
+            <span className="w-8 h-px bg-brand-blue" />
             <span className="text-xs font-bold tracking-[0.25em] uppercase text-blue-300">
               {kicker}
             </span>
@@ -57,7 +57,7 @@ export default function HeroSection({
           <div className="flex flex-wrap gap-4">
             <a
               href={ctaHref}
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#E10600] text-white font-semibold text-sm tracking-wide rounded-sm hover:bg-red-700 transition-colors"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand-red text-white font-semibold text-sm tracking-wide rounded-sm hover:bg-red-700 transition-colors"
             >
               {ctaLabel}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -13,7 +13,7 @@ export default function ServiceCard({ image, title, description, items, tall }) 
   return (
     <div
       className={`group relative overflow-hidden rounded-xl shadow-lg ${
-        tall ? "h-96 lg:h-[420px]" : "h-72 lg:h-80"
+        tall ? "h-96 lg:h-105" : "h-72 lg:h-80"
       } cursor-default`}
     >
       {/* Background image with zoom on hover */}
@@ -24,7 +24,7 @@ export default function ServiceCard({ image, title, description, items, tall }) 
       />
 
       {/* Gradient overlay — always dark, deeper on hover */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10 transition-opacity duration-300 group-hover:from-black/90" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/45 to-black/10 transition-opacity duration-300 group-hover:from-black/90" />
 
       {/* Content */}
       <div className="relative h-full flex flex-col justify-end p-6 lg:p-7">
@@ -38,7 +38,7 @@ export default function ServiceCard({ image, title, description, items, tall }) 
           <ul className="space-y-1">
             {items.map((item) => (
               <li key={item} className="flex items-start gap-2 text-xs text-gray-300">
-                <span className="mt-0.5 w-1 h-1 rounded-full bg-[#0B5ED7] flex-shrink-0 mt-1.5" />
+                <span className="w-1 h-1 rounded-full bg-brand-blue shrink-0 mt-1.5" />
                 {item}
               </li>
             ))}

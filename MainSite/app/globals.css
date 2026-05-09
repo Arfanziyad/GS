@@ -16,6 +16,18 @@
   --color-brand-blue: #0B5ED7;
   --color-brand-red: #E10600;
   --color-section-alt: #F9FAFB;
+  /* aliases used by subdivision components */
+  --color-brand-alt: #F9FAFB;
+  --color-brand-alt-bg: #F9FAFB;
+  --color-brand-footer: #111827;
+  --color-brand-footer-alt: #1a1f2e;
+  --color-brand-charcoal: #111827;
+  --color-charcoal-900: #1a1a1a;
+  --color-charcoal-800: #242424;
+  --color-charcoal-700: #2e2e2e;
+  /* ArchitecturalProducts uses primary-blue / primary-red */
+  --color-primary-blue: #0B5ED7;
+  --color-primary-red: #E10600;
 }
 
 *, *::before, *::after {
@@ -64,3 +76,63 @@ body {
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
+
+/* ── Rental division animations ── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-slide-up { animation: fadeSlideUp 0.6s ease-out both; }
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+
+/* ── Rental equipment card hover ── */
+.equipment-card:hover .equipment-card-img { transform: scale(1.07); }
+
+/* ── Fire Protection utility classes ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: #E10600;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+.btn-primary:hover { background-color: #b91c1c; }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn-secondary:hover { background-color: #fff; color: #111827; }
+
+.card-base {
+  background-color: #fff;
+  border: 1px solid #f3f4f6;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.card-base:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); transform: translateY(-2px); }

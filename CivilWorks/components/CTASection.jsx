@@ -25,7 +25,7 @@ export default function CTASection({
       <div className="absolute inset-0 bg-[#0B2747]/92" />
 
       {/* Decorative line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0B5ED7] via-[#E10600] to-[#0B5ED7]" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-brand-blue via-brand-red to-brand-blue" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-blue-300 mb-4">
@@ -45,7 +45,7 @@ export default function CTASection({
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href={primaryHref}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#E10600] text-white font-semibold text-sm tracking-wide rounded-sm hover:bg-red-700 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-red text-white font-semibold text-sm tracking-wide rounded-sm hover:bg-red-700 transition-colors"
           >
             {primaryLabel}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export default function CTASection({
           </a>
           <a
             href={secondaryHref}
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#0B5ED7] text-white font-semibold text-sm tracking-wide rounded-sm hover:bg-[#0B5ED7] transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-brand-blue text-white font-semibold text-sm tracking-wide rounded-sm hover:bg-brand-blue transition-colors"
           >
             {secondaryLabel}
           </a>

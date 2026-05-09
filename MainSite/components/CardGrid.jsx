@@ -1,32 +1,24 @@
 import DivisionCard from "./DivisionCard";
 
-const BASE = {
-  architectural: process.env.NEXT_PUBLIC_URL_ARCHITECTURAL  ?? "http://localhost:3001",
-  civil:         process.env.NEXT_PUBLIC_URL_CIVIL          ?? "http://localhost:3002",
-  electrical:    process.env.NEXT_PUBLIC_URL_ELECTRICAL     ?? "http://localhost:3003",
-  fire:          process.env.NEXT_PUBLIC_URL_FIRE           ?? "http://localhost:3004",
-  rental:        process.env.NEXT_PUBLIC_URL_RENTAL         ?? "http://localhost:3005",
-};
-
 const divisions = [
   {
     title: "Architectural Products",
     description: "Premium architectural and construction material solutions",
-    href: BASE.architectural,
+    href: "/architectural",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Civil Works",
     description: "Civil construction, foundations, and structural works",
-    href: BASE.civil,
+    href: "/civil",
     image:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Electrical & Instrumentation",
     description: "Power systems, automation, and industrial control solutions",
-    href: BASE.electrical,
+    href: "/electrical",
     image:
       "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&q=80",
   },
@@ -41,14 +33,14 @@ const divisions = [
   {
     title: "Fire Protection Systems",
     description: "Certified fire detection and suppression systems",
-    href: BASE.fire,
+    href: "/fire",
     image:
       "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Rental Services",
     description: "Construction equipment and manpower solutions",
-    href: BASE.rental,
+    href: "/rental",
     image:
       "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
   },
